@@ -1,1 +1,1 @@
-first bash script
+First task on basic shell command
