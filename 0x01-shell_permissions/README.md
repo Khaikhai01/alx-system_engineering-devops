@@ -1,1 +1,1 @@
- a script that adds execute permission to the owner of the file
+a script that gives multiple premission
