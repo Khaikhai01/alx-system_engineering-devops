@@ -1,1 +1,1 @@
-A script that has no permission for owner and group, but has permission for other users
+a script that sets the mode of the file hello to rwxr x wx
