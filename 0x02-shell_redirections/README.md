@@ -4,3 +4,4 @@ Replace all characters A and c from input to Z and e respectively.
 Create a script that removes all letters c and C from input.
 a script that reverse its input
  a script that displays all users and their home directories, sorted by users.
+a script that lists all the files with a .gif extension in the current directory and all its sub-directories.
