@@ -1,1 +1,1 @@
-overwitting/creating a new file
+a script that duplicates the last line of a file
