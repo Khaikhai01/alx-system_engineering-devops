@@ -1,1 +1,1 @@
-display the first three lines of a file iacta
+a script that creates a file which ends with a new line
