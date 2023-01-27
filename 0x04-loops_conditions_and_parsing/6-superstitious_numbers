@@ -4,25 +4,26 @@
 #displays 9 and then bad luck from Japan for the 9th loop iteration
 #displays 17 and then bad luck from Italy for the 17th loop iteration
 
-var=1
-while ((var <= 20));
+var=20
+count=1
+while ((count <= var));
 do
-    case $var in
+    case $count in
         4)
-            echo $var
+            echo $count
             echo bad luck from China
             ;;
         9)
-            echo $var
+            echo $count
             echo bad luck from Japan
             ;;
         17)
-            echo $var
+            echo $count
             echo bad luck from Italy
 	    ;;
         *)
-            echo $var
+            echo $count
             ;;
     esac
-    ((var++))
+    ((count++))
     done
