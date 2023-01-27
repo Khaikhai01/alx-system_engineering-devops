@@ -6,12 +6,12 @@ do
         echo school file exists
         if [ ! -s $entry ]; then
             echo school file is empty
-        elif [ -s $entry ]; then
+        else
             echo school file is not empty
         fi
         if [ -f $entry ]; then
             echo school is a regular file
-        elif [ ! -f $entry ]; then
+        else
             continue
         fi
     else
