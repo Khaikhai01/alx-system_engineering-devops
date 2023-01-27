@@ -7,17 +7,22 @@
 var=1
 while ((var <= 20));
 do
-    if ((var == 4)); then
-        echo $var
-	echo bad luck from China
-    elif ((var == 9)); then
-        echo $var
-	echo bad luck from Japan
-    elif ((var == 17)); then
-        echo $var
-        echo bad luck from Italy
-    else
-        echo $var
-    fi
+    case $var in
+        4)
+            echo $var
+            echo bad luck from China
+            ;;
+        9)
+            echo $var
+            echo bad luck from Japan
+            ;;
+        17)
+            echo $var
+            echo bad luck from Italy
+	    ;;
+        *)
+            echo $var
+            ;;
+    esac
     ((var++))
     done
