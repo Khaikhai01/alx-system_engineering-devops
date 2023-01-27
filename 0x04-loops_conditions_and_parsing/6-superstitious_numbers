@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#Bash script that displays numbers from 1 to 20 and:
+#displays 4 and then bad luck from China for the 4th loop iteration
+#displays 9 and then bad luck from Japan for the 9th loop iteration
+#displays 17 and then bad luck from Italy for the 17th loop iteration
+
+var=1
+while ((var <= 20)); do
+    if ((var == 4)); then
+        echo $var
+	echo bad luck from China
+    elif ((var == 9)); then
+        echo $var
+	echo bad luck from Japan
+    elif ((var == 17)); then
+        echo $var
+        echo bad luck from Italy
+    else
+        echo $var
+    fi
+    ((var++))
+    done
