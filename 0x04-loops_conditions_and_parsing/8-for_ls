@@ -3,8 +3,6 @@
 #The content of the current directory
 #In a list format
 #Where only the part of the name after the first dash is displayed
-
-search_dir=0x04-loops_conditions_and_parsing
 for entry in *
 do
     if [ -f $entry ]; then
