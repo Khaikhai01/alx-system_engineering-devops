@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 #Bash script that gives you information about the school file.
-for entry in school
+search="school"
+for entry in $search
 do
-    if [ -a $entry ]; then
+    if [ -a "$entry" ]; then
         echo school file exists
-        if [ ! -s $entry ]; then
+        if [ ! -s "$entry" ]; then
             echo school file is empty
         else
             echo school file is not empty
         fi
-        if [ -f $entry ]; then
+        if [ -f "$entry" ]; then
             echo school is a regular file
         else
             continue
