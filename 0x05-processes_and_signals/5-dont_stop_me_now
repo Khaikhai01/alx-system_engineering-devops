@@ -3,5 +3,5 @@
 var=$(pgrep -f ./4-to_infinity_and_beyond)
 while [ "$var" ];
 do
-    kill %1
+    kill "$var"
     done
