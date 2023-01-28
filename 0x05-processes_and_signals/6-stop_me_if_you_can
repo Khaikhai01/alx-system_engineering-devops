@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Bash script that kills To infinity and beyond indefinitely.
+# Bash script that terminates using pkill.
 var=$(pgrep -f ./4-to_infinity_and_beyond)
 while [ "$var" ];
 do
-   pkill "$var"
-    done
+    pkill "$var"
+done
