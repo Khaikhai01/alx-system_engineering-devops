@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Bash script that displays lines containing the bash word
+# shellcheck disable=SC2009
+function BashPid
+{
+    ps -ufx | grep bash
+}
+BashPid
