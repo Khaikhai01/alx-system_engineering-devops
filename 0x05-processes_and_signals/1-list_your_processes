@@ -2,6 +2,6 @@
 # displays a list of currently running processes.
 function proCheck()
 {
-    ps -u
+    ps -ufx
 }
 proCheck
