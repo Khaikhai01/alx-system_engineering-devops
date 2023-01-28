@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Bash script that displays To infinity and beyond indefinitely.
+# Bash script that kills To infinity and beyond indefinitely.
 var=0
 while [ "$var" ];
 do
