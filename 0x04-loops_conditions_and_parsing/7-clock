@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #Bash script that displays the time for 12 hours and 59 minutes:
 hr=0
-while ((hr <= 12));
+while [ "$hr" -ne 13 ];
 do
     min=1
-    echo "Hour: " "$hr"
-    while ((min <= 59));
+    echo "Hour: $hr"
+    while [ "$min" -ne 60 ];
     do
-        echo "$min";
+        echo "$min"
         ((min++))
     done
-    ((hr++));
+    ((hr++))
 done
