@@ -3,7 +3,7 @@
 search="school"
 for entry in $search
 do
-    if [ -a "$entry" ]; then
+    if [ -e "$entry" ]; then
         echo school file exists
         if [ ! -s "$entry" ]; then
             echo school file is empty
