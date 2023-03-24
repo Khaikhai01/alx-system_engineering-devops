@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Get a list of all network interfaces
+interfaces=$(ifconfig -a | awk '/inet / {print $2}')
+
+for interface in $interfaces
+do
+  echo "$interface"
+done

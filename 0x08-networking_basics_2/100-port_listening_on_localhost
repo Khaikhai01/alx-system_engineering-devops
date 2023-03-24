@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#listening to a port
+
+nc -l 98

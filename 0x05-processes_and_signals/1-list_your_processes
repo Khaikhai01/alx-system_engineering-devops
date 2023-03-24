@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays a list of currently running processes.
+function proCheck()
+{
+    ps -ufx
+}
+proCheck

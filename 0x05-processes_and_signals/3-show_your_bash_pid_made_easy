@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Displays PID whose name contain the word bash
+function PidBash
+{
+    pgrep -l bash
+}
+PidBash
