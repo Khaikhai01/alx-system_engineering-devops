@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#Bash script that creates an RSA key pair which has betty as the password.
-
-ssh-keygen -t rsa -b 4096 -N "betty" -f "school"
