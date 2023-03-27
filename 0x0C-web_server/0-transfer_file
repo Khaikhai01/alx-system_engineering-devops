@@ -6,11 +6,10 @@ if [ $# -lt 4 ]; then
   exit 1
 fi
 
-path_to_file=$1
+filepath=$1
 ip=$2
-username=$3
-path_to_ssh_key=$4
+usrname=$3
+sshpath=$4
 
 # Transfer the file to the server
-scp -i "$path_to_ssh_key" -o StrictHostKeyChecking=no "$path_to_file"\
-	    "$username@$ip:~/"
+scp -i "$sshpath" -o StrictHostKeyChecking=no "$filepath" "$usrname@$ip:~/"
