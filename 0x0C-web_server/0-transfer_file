@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # bash script to transfer file to a remote server
 filepath=$1
 ip=$2
