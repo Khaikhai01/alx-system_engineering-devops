@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Fix to make curl retrieve a page that contains `Hello Holberton`
+# Fix curl error message by starting Apache server
 
 sudo service apache2 start
-sudo service apache2 status
-curl 0:8080
