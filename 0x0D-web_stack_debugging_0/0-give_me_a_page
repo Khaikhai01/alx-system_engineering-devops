@@ -3,3 +3,4 @@
 
 sudo service apache2 start
 sudo service apache2 status
+curl 0:8080
