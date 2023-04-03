@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#installation of HAproxy
+#Server configuration with hostname
+
+sudo apt -y install haproxy
+
+configFrontend='''
+frontend myFrontend
+        bind :80
+        default_backend myBackend
+'''
+configBackend='''
+backend myBackend
+        balance roundrobin
+        server 106692-web-01 100.25.204.11:80 check
+        server 106692-web-02 52.3.245.182:80 check
+'''
+echo "$configFrontend" >> /etc/haproxy/haproxy.cfg
+echo "$configBackend" >> /etc/haproxy/haproxy.cfg
+
+sudo /etc/init.d/haproxy start
+sudo update-rc.d haproxy defaults
+sudo /etc/init.d/haproxy reload
