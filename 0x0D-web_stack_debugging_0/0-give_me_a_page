@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Fix curl error message by starting Apache server
-
 service apache2 status
 service apache2 start
