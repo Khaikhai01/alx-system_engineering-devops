@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#checks whether nginx is listening on port 80 if not change it to listen on port 80
+
+#checking for listening port
+netstat -ntlp
+
+#deleting the sites-enabled default file
+rm /etc/nginx/sites-enabled/default
+
+# Create a symbolic link for the configuration file
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+#restart nginx
+service nginx restart
