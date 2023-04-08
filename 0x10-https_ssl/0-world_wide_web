@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Bash script that displays information about subdomains.
+
+ip_extract () {
+    extract=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:')
+    echo "$extract" | awk '{split($1,a,"."); print "The subdomain " a[1] " is a " $4 " record and points to " $5}' | tail -1
+}
+
+if [ "$#" == 1 ]; then
+    ip_extract "$1" "www"
+    ip_extract "$1" "lb-01"
+    ip_extract "$1" "web-01"
+    ip_extract "$1" "web-02"
+elif [ "$#" == 2 ]; then
+    ip_extract "$1" "$2"
+fi
