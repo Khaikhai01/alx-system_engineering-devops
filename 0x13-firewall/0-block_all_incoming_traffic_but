@@ -1,5 +1,6 @@
+#enabling firewall
 sudo ufw status
-sudo ufw allow OpenSSH
-sudo ufw allow htpp
-sudo ufw allow htpps
+sudo ufw allow 22
+sudo ufw allow 443
+sudo ufw allow 80
 sudo ufw enable
