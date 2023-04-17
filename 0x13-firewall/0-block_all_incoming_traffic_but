@@ -1,0 +1,4 @@
+sudo ufw status
+sudo ufw allow OpenSSH
+sudo ufw allow proto tcp from any to any port 80,443
+sudo ufw enable
