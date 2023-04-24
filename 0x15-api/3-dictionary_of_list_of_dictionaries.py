@@ -5,18 +5,23 @@ import json
 import requests
 
 if __name__ == "__main__":
-    usr_json = requests.get('https://jsonplaceholder.typicode.com/users/' +
-                            emp_id).json()
+    usr_url = 'https://jsonplaceholder.typicode.com/users/'
+    usr_json = requests.get(usr_url).json()
     todo_file = 'todo_all_employees.json'
     first_dict = {}
 
 
     for item in usr_json:
-        sec_dict = {}
-        sec_dict["task"] = item.get("title")
-        sec_dict["completed"] = item.get("completed")
-        sec_dict["usernae"] = emp_name
-        first_dict.get(emp_id).append(sec_dict)
+        emp_name = item.get("username")
+        emp_id = str(item.get("id"))
+        emp_data = requests.get("{}{}/todos".format(usr_url, emp_id)).json()
+        first_dict[emp_id] = []
+        for element in emp_data:
+            sec_dict = {}
+            sec_dict["task"] = element.get("title")
+            sec_dict["completed"] = element.get("completed")
+            sec_dict["username"] = emp_name
+            first_dict[emp_id].append(sec_dict)
 
-    with open(json_file, 'w') as jsfile:
-        json.dump(first_dict, jsfile)
+    with open(todo_file, 'w') as data_file:
+        json.dump(first_dict, data_file)
