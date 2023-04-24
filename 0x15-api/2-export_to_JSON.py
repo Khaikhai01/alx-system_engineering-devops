@@ -2,6 +2,7 @@
 '''script that retrieves infromation about an employee using ID'''
 
 import csv
+import json
 import requests
 from sys import argv
 
@@ -13,11 +14,17 @@ if __name__ == "__main__":
     todos = requests.get('https://jsonplaceholder.typicode.com/users/' +
                          emp_id + '/todos').json()
 
-    csv_file = emp_id + '.csv'
+    json_file = emp_id + '.json'
+    first_dict = {}
 
-    with open(csv_file, 'w') as csv:
-        for todo in todos:
-            csv.write('"{}","{}","{}","{}"\n'.format(todo.get('userId'),
-                                                     emp_name,
-                                                     todo.get("completed"),
-                                                     todo.get("title")))
+    first_dict[emp_id] = []
+
+    for item in todos:
+        sec_dict = {}
+        sec_dict["task"] = item.get("title")
+        sec_dict["completed"] = item.get("completed")
+        sec_dict["usernae"] = emp_name
+        first_dict.get(emp_id).append(sec_dict)
+
+    with open(json_file, 'w') as jsfile:
+        json.dump(first_dict, jsfile)
