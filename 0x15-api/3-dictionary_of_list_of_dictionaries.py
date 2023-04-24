@@ -10,7 +10,6 @@ if __name__ == "__main__":
     todo_file = 'todo_all_employees.json'
     first_dict = {}
 
-
     for item in usr_json:
         emp_name = item.get("username")
         emp_id = str(item.get("id"))
