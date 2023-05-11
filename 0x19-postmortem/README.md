@@ -1,6 +1,6 @@
    # 0x19. Postmortem
-* __DevOps
-* __SysAdmin
+* ****DevOps****
+* ****SysAdmin****
 * By: Sylvain Kalache
 * Weight: 1
 * Project will start May 8, 2023 6:00 AM, must end by May 15, 2023 6:00 AM
@@ -26,16 +26,16 @@ Read or watch:
 **It is your responsibility to request a review for your postmortem from a peer before the project’s deadline. If no peers have been reviewed, you should request a review from a TA or staff member.**
 
 # Tasks
-__0. My first postmortem__
+****0. My first postmortem****
 Using one of the web stack debugging project issue or an outage you have personally face, write a postmortem. Most of you will never have faced an outage, so just get creative and invent your own :)
 
 # Requirements:
-****_Issue Summary (that is often what executives will read) must contain:****
+****Issue Summary (that is often what executives will read) must contain:****
 * duration of the outage with start and end times (including timezone)
 * what was the impact (what service was down/slow? What were user experiencing? How many % of the users were affected?)
 * what was the root cause
 
-**__**Timeline (format bullet point, format: time - keep it short, 1 or 2 sentences) must contain:****
+****Timeline (format bullet point, format: time - keep it short, 1 or 2 sentences) must contain:****
 * when was the issue detected
 * how was the issue detected (monitoring alert, an engineer noticed something, a customer complained…)
 * actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
@@ -43,11 +43,11 @@ Using one of the web stack debugging project issue or an outage you have persona
 * which team/individuals was the incident escalated to
 * how the incident was resolved
 
-**__**Root cause and resolution must contain:****
+****Root cause and resolution must contain:****
 * explain in detail what was causing the issue
 * explain in detail how the issue was fixed
 
-_****_Corrective and preventative measures must contain:****
+****Corrective and preventative measures must contain:****
 * what are the things that can be improved/fixed (broadly speaking)
 * a list of tasks to address the issue (be very specific, like a TODO, example: patch Nginx server, add monitoring on server memory…)
 * Be brief and straight to the point, between 400 to 600 words
